@@ -1,9 +1,18 @@
-teams:
+# Note: this file is public
+# File contains github team names and github user names
+
+# Information here will override team member/mentor lists in the full team management config
+# held in the private team-management repo in this org.
+
+teams:   
+  # Use github case insensitive team name as key:
   middle-management:
+    # team members are active in the team and will be part of automatic review notifications
     members: 
       - jspaleta  
       - xmulligan
       - joestringer  
+    # mentors ar excluded from automatic review notifications  
     mentors:
       - xmulligan
       - jspaleta  

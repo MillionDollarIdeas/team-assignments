@@ -8,3 +8,11 @@ teams:
       - xmulligan
       - jspaleta  
       - joestringer  
+  simulants:
+    members:
+      - jspaleta
+      - xmulligan
+    mentors:
+      - jspaleta
+      - xmulligan
+          

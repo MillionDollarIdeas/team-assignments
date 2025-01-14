@@ -9,8 +9,7 @@ teams:
   middle-management:
     # team members are active in the team and will be part of automatic review notifications
     members: 
-      - jspaleta  
-      - xmulligan
+      - jspaleta
       - joestringer  
     # mentors ar excluded from automatic review notifications  
     mentors:

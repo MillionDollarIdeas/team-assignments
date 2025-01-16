@@ -28,8 +28,12 @@ fi
 echo "# Aggregating Teams from $1/*.yaml"
 cd $1
 touch $outputfile
+echo "teams:" >> $outputfile
 for file in *.yaml; do
      f="${file%.*}"
-     echo "$f:" >> $outputfile
-     sed 's/^/  /' $file >> $outputfile
+     echo "  $f:" >> $outputfile
+     sed 's/^/    /' $file >> $outputfile
 done
+
+echo "Final Aggregate file $outputfile"
+cat $outputfile

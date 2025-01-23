@@ -1,0 +1,10 @@
+teams:
+  simulants:
+    member: true
+    mentor: false  
+  team-manaement:
+    member: false
+    mentor: true  
+  fictitious:
+    member: true
+    mentor: true

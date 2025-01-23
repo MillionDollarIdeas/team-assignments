@@ -1,0 +1,22 @@
+name: Team Aggregate
+on:
+
+  # manual trigger
+  workflow_dispatch:
+
+  # push on main branch
+  push:
+    branches:
+      - main
+
+jobs:
+  dispatch-team-management:
+    if: github.repository == 'milliondollarideas/team-assignments'
+    name: Run Team override aggregate script
+    runs-on: ubuntu-latest
+    environment: team-management  
+    steps:
+      # Run the override aggregate script
+      - name: compile aggregate overrides
+        run: |
+          tools/aggregate_team_overrides.sh ladder/teams ladder/users

@@ -16,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: team-management  
     steps:
+      # Checkout repo with full config
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       # Run the override aggregate script
       - name: compile aggregate overrides
         run: |

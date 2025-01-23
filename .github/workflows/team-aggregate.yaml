@@ -21,4 +21,9 @@ jobs:
       # Run the override aggregate script
       - name: compile aggregate overrides
         run: |
-          tools/aggregate_team_overrides.sh ladder/teams ladder/users
+          tools/aggregate_team_overrides.sh ladder/teams ladder/users | tee overrides.yaml
+      # add weirdmdibot
+      - name: add weirdmdibot to all override teams
+        run: |
+          yq -i '.teams[].members += "wierdmdibot"' overrides.yaml ; echo "WeirdMDIbot added to Aggregate Overrides"; cat overrides.yaml
+

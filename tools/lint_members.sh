@@ -29,7 +29,7 @@ logins=( `curl -L \
   -H "Authorization: Bearer $ORG_READ_TOKEN" \
   -H "X-GitHub-Api-Version: 2022-11-28" \
   https://api.github.com/orgs/$2/members | jq -r '.[].login'` )
-echo "Org Members:"
+>&2 echo "Org Members:"
 for login in "${logins[@]}"; do
   >&2 echo "$login"
 done

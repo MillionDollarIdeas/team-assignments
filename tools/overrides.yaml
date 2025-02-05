@@ -1,0 +1,20 @@
+teams:
+  middle-management:
+    members: 
+      - jspaleta
+      - joestringer 
+      - xmulligan
+    mentors:
+      - xmulligan
+      - jspaleta  
+      - joestringer  
+              
+  simulants:
+    members: 
+      - jspaleta
+      - joestringer 
+      - xmulligan
+    mentors:
+      - xmulligan
+      - jspaleta  
+      - joestringer  

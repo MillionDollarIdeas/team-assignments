@@ -16,7 +16,7 @@ set -o pipefail
 # $2 - org name
 if [ $# -ne 2 ]; then
   echo "Usage: $0 <TEAMS_DIRECTORY> <GITHUB_ORG>"
-  echo "Organization read token in envvar ORG_READ_TOKEN"
+  echo "Organization read token in envvar GITHUB_TOKEN"
   exit 1
 fi
 
@@ -26,7 +26,7 @@ cd "$1"
 
 logins=( `curl -L \
   -H "Accept: application/vnd.github+json" \
-  -H "Authorization: Bearer $ORG_READ_TOKEN" \
+  -H "Authorization: Bearer $GITHUB_TOKEN" \
   -H "X-GitHub-Api-Version: 2022-11-28" \
   https://api.github.com/orgs/$2/members | jq -r '.[].login'` )
 >&2 echo "Org Members:"

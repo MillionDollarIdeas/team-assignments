@@ -22,7 +22,7 @@ jobs:
       - name: check team membership for org membership
         run: tools/lint_members.sh ladder/teams MillionDollarIdeas
         env:
-          ORG_READ_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
       # Run the override aggregate script
       - name: compile aggregate overrides
         run: |
